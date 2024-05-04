@@ -5,26 +5,35 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "scheme": "frankofile3",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#282828"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.frankofile3"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#282828"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
     }
   }
 }
