@@ -31,6 +31,12 @@
           <string>com.frankofile3</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>exp+frankofile3</string>
+        </array>
+      </dict>
     </array>
     <key>CFBundleVersion</key>
     <string>1</string>
@@ -75,22 +81,3 @@
     <false/>
   </dict>
 </plist>
-
-<key>NSAppTransportSecurity</key>
-<dict>
-  <key>NSExceptionDomains</key>
-  <dict>
-    <key>yourserver.com</key>
-    <dict>
-      <!--Include to allow subdomains-->
-      <key>NSIncludesSubdomains</key>
-      <true/>
-      <!--Include to allow HTTP requests-->
-      <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-      <true/>
-      <!--Include to specify minimum TLS version-->
-      <key>NSTemporaryExceptionMinimumTLSVersion</key>
-      <string>TLSv1.1</string>
-    </dict>
-  </dict>
-</dict>

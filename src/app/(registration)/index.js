@@ -34,59 +34,57 @@ const RegistrationScreen = () => {
     });
   };
 
-  return (
-    <ScreenWrapper>
-      <View>
-      <TextInput
-        style={tailwind('border border-gray-300 p-2 rounded mb-4')}
-        onChangeText={setFirstName}
-        value={first_name}
-        placeholder="First Name"
-        autoComplete='none'
-      />
-      <TextInput
-        style={tailwind('border border-gray-300 p-2 rounded mb-4')}
-        onChangeText={setLastName}
-        value={last_name}
-        placeholder="Last Name"
-        autoComplete='none'
-      />
-      <TextInput
-        style={tailwind('border border-gray-300 p-2 rounded mb-4')}
-        onChangeText={setUsername}
-        value={username}
-        autoCapitalize='none'
-        placeholder="Username"
-        autoComplete='none'
-      />
-      <TextInput
-        style={tailwind('border border-gray-300 p-2 rounded mb-4')}
-        onChangeText={setEmail}
-        value={email}
-        placeholder="Email"
-        autoCapitalize='none'
-        keyboardType="email-address"
-        autoComplete='none'
-      />
-      <TextInput
-        style={tailwind('border border-gray-300 p-2 rounded mb-4')}
-        onChangeText={setPassword}
-        value={password}
-        placeholder="Password"
-        autoCapitalize='none'
-        secureTextEntry
-        autoComplete='none'
-      />
-      <Button title="Register" onPress={handleRegister} />
-      <View style={tailwind('mt-4')}>
-        <Text style={styles.color}>Already registered?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.backgroundColor}>Login Here</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
-    </ScreenWrapper>
-  );
+  //return (
+    //   <View>
+    //   <TextInput
+    //     style={tailwind('border border-gray-300 p-2 rounded mb-4')}
+    //     onChangeText={setFirstName}
+    //     value={first_name}
+    //     placeholder="First Name"
+    //     autoComplete='none'
+    //   />
+    //   <TextInput
+    //     style={tailwind('border border-gray-300 p-2 rounded mb-4')}
+    //     onChangeText={setLastName}
+    //     value={last_name}
+    //     placeholder="Last Name"
+    //     autoComplete='none'
+    //   />
+    //   <TextInput
+    //     style={tailwind('border border-gray-300 p-2 rounded mb-4')}
+    //     onChangeText={setUsername}
+    //     value={username}
+    //     autoCapitalize='none'
+    //     placeholder="Username"
+    //     autoComplete='none'
+    //   />
+    //   <TextInput
+    //     style={tailwind('border border-gray-300 p-2 rounded mb-4')}
+    //     onChangeText={setEmail}
+    //     value={email}
+    //     placeholder="Email"
+    //     autoCapitalize='none'
+    //     keyboardType="email-address"
+    //     autoComplete='none'
+    //   />
+    //   <TextInput
+    //     style={tailwind('border border-gray-300 p-2 rounded mb-4')}
+    //     onChangeText={setPassword}
+    //     value={password}
+    //     placeholder="Password"
+    //     autoCapitalize='none'
+    //     secureTextEntry
+    //     autoComplete='none'
+    //   />
+    //   <Button title="Register" onPress={handleRegister} />
+    //   <View style={tailwind('mt-4')}>
+    //     <Text style={styles.color}>Already registered?</Text>
+    //     <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+    //       <Text style={styles.backgroundColor}>Login Here</Text>
+    //     </TouchableOpacity>
+    //   </View>
+    // </View>
+  // );
 };
 const styles = StyleSheet.create({
   container: {

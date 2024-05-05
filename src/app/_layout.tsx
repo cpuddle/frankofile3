@@ -4,7 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import "../global.css"
+import "@/app/global.css"
 
 
 
@@ -19,7 +19,7 @@ const App = () => {
 
 const RootNavigation = () => {
     return (
-      <Stack initialRouteName='(login)'>
+      <Stack initialRouteName='(tabs)'>
         <Stack.Screen name='(tabs)' options={{headerShown:false}}/>
         <Stack.Screen name='(login)' options={{headerShown: false}}/>
         <Stack.Screen name='(registration)' options={{headerShown: false}}/>

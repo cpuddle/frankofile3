@@ -4,6 +4,8 @@ import { FontAwesome, FontAwesome6, Ionicons, MaterialCommunityIcons } from '@ex
 import { BlurView } from 'expo-blur'
 import { Tabs } from 'expo-router'
 import { StyleSheet } from 'react-native'
+import "@/app/global.css"
+
 
 const TabsNavigation = () => {
     return (

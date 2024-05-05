@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, Text, Alert, TouchableOpacity } from 'react-native';
 import { defaultStyles } from "@/styles"
 import { Link } from 'expo-router';
-import { FlipInEasyX } from 'react-native-reanimated';
-
 
 
 const LoginScreen = () => {
