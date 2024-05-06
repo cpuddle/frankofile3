@@ -1,15 +1,16 @@
 //import { FloatingPlayer } from '@/components/FloatingPlayer'
+import { FloatingPlayer } from '@/components/FloatingPlayer'
 import { colors, fontSize } from '@/constants/tokens'
 import { FontAwesome, FontAwesome6, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 import { BlurView } from 'expo-blur'
 import { Tabs } from 'expo-router'
 import { StyleSheet } from 'react-native'
-import "@/app/global.css"
 
 
 const TabsNavigation = () => {
     return (
-        <Tabs screenOptions={{
+        <>
+            <Tabs screenOptions={{
             tabBarActiveTintColor: colors.primary,
             tabBarLabelStyle: {
                 fontSize: fontSize.xs,
@@ -40,10 +41,13 @@ const TabsNavigation = () => {
                 title: "Albums",
                 tabBarIcon: ({color}) => <MaterialCommunityIcons name="album" size={20} color={color} />
             }}/>
-            <Tabs.Screen name="search" options = {{
-                title: "Search",
-                tabBarIcon: ({color}) => <FontAwesome name="search" size={20} color={color} />
-            }}/>
+            <Tabs.Screen
+                name="favorites"
+                options={{
+                    title: 'Favorites',
+                    tabBarIcon: ({ color }) => <FontAwesome name="heart" size={20} color={color} />,
+                }}
+            />
             <Tabs.Screen name="artists" options = {{
                 title: "Artists",
                 tabBarIcon: ({color}) => <FontAwesome6 name="users-line" size={20} color={color} />
@@ -53,6 +57,14 @@ const TabsNavigation = () => {
                 tabBarIcon: ({color}) => <MaterialCommunityIcons name="playlist-play" size={20} color={color} />
             }}/>
         </Tabs>
+
+        <FloatingPlayer style={{
+            position: 'absolute',
+            left: 8,
+            right: 8,
+            bottom: 78,
+        }}/>
+        </>
     )
 }
 export default TabsNavigation

@@ -6,6 +6,8 @@ import { useNavigationSearch } from "@/hooks/useNavigationSearch"
 import library from '@/assets/data/library.json'
 import { useMemo } from "react"
 import { trackTitleFilter } from "@/helpers/filter"
+import { useTracks } from "@/store/library"
+import { generateTracksListId } from "@/helpers/miscellaneous"
 
 const SongsScreen = () => {
 
@@ -15,17 +17,19 @@ const SongsScreen = () => {
         }
     })
 
+    const tracks = useTracks()
+
     const filteredTracks = useMemo(() => {
-        if(!search) return library
+        if(!search) return tracks
 
         return library.filter(trackTitleFilter(search))
-    }, [search])
+    }, [search, tracks])
 
     return (
         <View style={defaultStyles.container}>
             <ScrollView contentInsetAdjustmentBehavior="automatic"
                         style={{ paddingHorizontal: screenPadding.horizontal}}>
-                <TrackList tracks={filteredTracks} scrollEnabled={false}/>
+                <TrackList id={generateTracksListId('songs', search)} tracks={filteredTracks} scrollEnabled={false}/>
             </ScrollView>
         </View>
     )

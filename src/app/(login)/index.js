@@ -69,7 +69,7 @@ const LoginScreen = () => {
             <Text>Register</Text>
           </TouchableOpacity>
           <View>
-              <Link href={"(tabs)/(songs)"}>
+              <Link replace href={"(tabs)/(songs)"} style={defaultStyles.text}>
                 <Text>Bypass</Text>
               </Link>
           </View>

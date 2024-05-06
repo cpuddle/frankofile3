@@ -104,5 +104,12 @@
     "title": "Hidden Frozen Lake - Go By Ocean",
     "artist": "Ryan McCaffrey",
     "playlist": ["Chill 🌱"]
+  },
+  {
+    "url": "http://sendmessage.live:8888/stream/1.mp3",
+    "title": "Beach Life-in-Death",
+    "artist": "Car Seat Headrest",
+    "playlist": ["Chill 🌱"],
+    "artwork": "https://upload.wikimedia.org/wikipedia/en/e/e0/Twin_fantasy.jpg"
   }
 ]
