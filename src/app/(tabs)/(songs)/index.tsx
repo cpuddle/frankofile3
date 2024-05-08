@@ -8,6 +8,7 @@ import { useMemo } from "react"
 import { trackTitleFilter } from "@/helpers/filter"
 import { useTracks } from "@/store/library"
 import { generateTracksListId } from "@/helpers/miscellaneous"
+import { Link } from "expo-router"
 
 const SongsScreen = () => {
 

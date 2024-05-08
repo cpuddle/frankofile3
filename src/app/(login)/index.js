@@ -11,7 +11,7 @@ const LoginScreen = () => {
   const handleLogin = () => {
     // Implement login logic here
     // Example POST request to your FastAPI backend
-    fetch('http://sendmessage.live:8888/login', {
+    fetch('https://frankofile.sendmessage.live/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -26,7 +26,11 @@ const LoginScreen = () => {
       console.log('Success:', data);
       if (data.success) {
         // Navigate to the home page
-        navigation.navigate('Home'); // Replace 'HomePage' with the actual name of your home page route
+        // navigation.navigate('Home');// Replace 'HomePage' with the actual name of your home page route
+        return (
+          <Link replace href={"(tabs)/(songs)"}>
+          </Link>
+        )
       } else {
         // Handle unsuccessful login
         Alert.alert('Login Failed', 'Invalid email or password');
@@ -42,7 +46,7 @@ const LoginScreen = () => {
   return (
     <View style={defaultStyles.container} className='flex-1 justify-center items-center'>
       <TextInput 
-        className='text-2xl font-bold bg-aqua text-white'
+        className='text-white text-2xl'
         onChangeText={setEmail}
         value={email}
         placeholder="Email"
@@ -50,6 +54,7 @@ const LoginScreen = () => {
         keyboardType="email-address"
       />
       <TextInput
+        className="text-white text-2xl"
         onChangeText={setPassword}
         value={password}
         placeholder="Password"
@@ -58,21 +63,12 @@ const LoginScreen = () => {
       />
       
       <View>
-        <TouchableOpacity onPress={handleLogin}>
-          <Text>Login</Text>
-        </TouchableOpacity>
-        <View>
-          <Text>
-            Register Here
-          </Text>
-          <TouchableOpacity>
-            <Text>Register</Text>
-          </TouchableOpacity>
-          <View>
-              <Link replace href={"(tabs)/(songs)"} style={defaultStyles.text}>
-                <Text>Bypass</Text>
-              </Link>
-          </View>
+        <View className="p-2 m-3 bg-yellow font-bold  border border-yellow rounded-full">
+            <Link replace href={"(tabs)/(songs)"}><Text>   Login</Text></Link>
+        </View>
+        <View className='items-center'>
+          <Text className='text-white'>Register Here</Text>
+          <View className='p-2 m-3 px-3 bg-yellow font-bold  border border-yellow rounded-full'><Link replace href={"(registration)"}><Text>Register</Text></Link></View>
         </View>
       </View>
     </View>

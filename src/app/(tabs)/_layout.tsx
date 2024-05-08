@@ -37,10 +37,10 @@ const TabsNavigation = () => {
                 title: "Songs",
                 tabBarIcon: ({color}) => <FontAwesome name="play-circle" size={20} color={color} />
             }}/>
-            <Tabs.Screen name="albums" options = {{
+            {/* <Tabs.Screen name="albums" options = {{
                 title: "Albums",
                 tabBarIcon: ({color}) => <MaterialCommunityIcons name="album" size={20} color={color} />
-            }}/>
+            }}/> */}
             <Tabs.Screen
                 name="favorites"
                 options={{
